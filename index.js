@@ -96,6 +96,12 @@ function deleteUser(id) {
 //!SECTION - End of Delete User Function
 
 function displayUsers() {
+  if(document.getElementById("outputList").hasChildNodes()) {
+    document.getElementById("outputList").innerHTML = "";
+  }
+  
+
+
   if (users.length > 0) {
     // append users to the DOM list as list elements
     for (let i = 0; i < users.length; i++) {
